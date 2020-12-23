@@ -1,0 +1,16 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n= int(input())
+pb ={}
+
+for i in range(n):
+    names,ph=input().split()
+    pb[names]=ph 
+while True:
+     try:
+      names = input()
+      if names in pb:
+        print (names,'=',pb[names],sep='')
+      else:
+       print("Not found")
+     except EOFError as e:
+        break
